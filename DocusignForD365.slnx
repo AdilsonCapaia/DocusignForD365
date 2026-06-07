@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Plugin.DocusignForD365/Plugin.DocusignForD365.csproj" Id="080ada7b-13d5-4509-a8df-78fac79ce14d" />
+  <Project Path="WebResources/WebResources.csproj" Id="13f3b1cf-90ff-454b-9e91-9b2b34f3c1c8" />
+</Solution>

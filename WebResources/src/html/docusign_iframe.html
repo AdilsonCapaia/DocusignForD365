@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocuSign Helper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            background-color: #ffffff;
+        }
+
+        #content {
+            display: flex;
+            gap: 8px;
+            flex-flow: column nowrap;
+            padding: 16px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #707070;
+        }
+
+        .error {
+            text-align: center;
+            padding: 20px;
+            color: #a4262c;
+            font-weight: 600;
+        }
+
+        .success {
+            text-align: center;
+            padding: 20px;
+            color: #107c10;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="loading">Initializing DocuSign helper...</div>
+    </div>
+
+    <script>
+            /**
+             * DocuSign Helper - Redirect Handler
+             *
+             * This web resource handles redirects from:
+             * 1. DocuSign view URLs (with event parameter)
+             * 2. DocuSign OAuth consent flow (with code parameter)
+             * 3. View URL redirects (with data parameter containing JSON with url property)
+             *
+             * Server-side OAuth flow is handled by Custom APIs.
+             */
+
+            /**
+             * Initializes the helper based on query parameters
+             */
+            function initialize() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const dataParam = urlParams.get('data');
+                const eventParam = urlParams.get('event');
+                const codeParam = urlParams.get('code');
+                const errorParam = urlParams.get('error');
+                const errorDescriptionParam = urlParams.get('error_description');
+
+                if (eventParam) {
+                    // This is a redirect from DocuSign view (correct/console view) - handle the event
+                    handleDocuSignEvent(eventParam);
+                } else if (codeParam) {
+                    // This is a redirect from DocuSign OAuth consent - show success
+                    handleOAuthCallback(codeParam);
+                } else if (errorParam) {
+                    // OAuth consent error occurred
+                    handleOAuthError(errorParam, errorDescriptionParam);
+                } else if (dataParam) {
+                    // This is data from navigateTo - parse and handle
+                    handleDataParameter(dataParam);
+                } else {
+                    // Default: redirect success, you can close the window
+                    displaySuccess("Redirect successful. You can close this window.");
+                    autoCloseWindow(2000);
+                }
+            }
+
+            /**
+             * Handles the data parameter from navigateTo
+             */
+            function handleDataParameter(dataParam) {
+                try {
+                    // Parse the JSON data
+                    const data = JSON.parse(decodeURIComponent(dataParam));
+
+                    if (data.url) {
+                        // This is a view URL redirect
+                        handleViewUrlRedirect(data.url);
+                    } else {
+                        displayError("Invalid data parameter - no URL provided.");
+                    }
+                } catch (error) {
+                    console.error("Failed to parse data parameter:", error);
+                    displayError("Failed to process redirect data.");
+                }
+            }
+
+            /**
+             * Handles view URL redirects
+             */
+            function handleViewUrlRedirect(url) {
+                try {
+                    displayLoading("Redirecting to DocuSign...");
+                    window.location.href = encodeURI(url);
+                } catch (error) {
+                    console.error("Failed to redirect to view URL:", error);
+                    displayError("Failed to redirect to DocuSign view.");
+                }
+            }
+
+            /**
+             * Handles OAuth consent success callback
+             */
+            function handleOAuthCallback(code) {
+                displaySuccess("Consent successful. You can close this window.");
+                autoCloseWindow(2000);
+            }
+
+            /**
+             * Handles events from DocuSign view redirects (correct/console view)
+             */
+            function handleDocuSignEvent(event) {
+                switch (event.toString().toLowerCase()) {
+                    case 'send':
+                        displaySuccess("Envelope corrected and sent successfully! You can close the window.");
+                        break;
+                    case 'save':
+                        displaySuccess("Envelope saved successfully! You can close the window.");
+                        break;
+                    case 'cancel':
+                        displaySuccess("Action cancelled. You can close the window.");
+                        break;
+                    case 'error':
+                        displayError("An error occurred while processing the envelope. Please check the envelope status and try again.");
+                        // Don't auto-close on errors - let user read the message
+                        break;
+                    case 'sessionend':
+                        displaySuccess("Session ended. You can close this window.");
+                        break;
+                    default:
+                        displayError(`Unknown event received: ${event}`);
+                        break;
+                }
+            }
+
+            /**
+             * Handles OAuth consent errors
+             */
+            function handleOAuthError(error, errorDescription) {
+                const message = errorDescription || error || "Unknown OAuth error";
+                displayError(`Consent failed: ${message}`);
+                // Don't auto-close on errors - let user read the message
+            }
+
+            /**
+             * Auto-close window after a delay
+             */
+            function autoCloseWindow(delay) {
+                setTimeout(() => {
+                    window.close();
+                }, delay);
+            }
+
+            /**
+             * Display functions
+             */
+            function displayLoading(message) {
+                const contentDiv = document.getElementById("content");
+                console.log(message);
+            }
+
+            function displayError(message) {
+                const contentDiv = document.getElementById("content");
+                console.error( message);
+            }
+
+            function displaySuccess(message) {
+                const contentDiv = document.getElementById("content");
+                console.log(message);
+            }
+
+            // Initialize when DOM is loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initialize);
+            } else {
+                initialize();
+            }
+    </script>
+</body>
+</html>
