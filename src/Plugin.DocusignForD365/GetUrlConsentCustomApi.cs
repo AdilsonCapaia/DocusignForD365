@@ -33,7 +33,7 @@ namespace Plugin.DocusignForD365
                 var authService = new DocuSignAuthService(tracingService, service, context);
                 var apiService = new DocusignApiService(tracingService, service, authService);
 
-                var consentResponse = apiService.GetIndividualUrlConsentAsync();
+                var consentResponse = apiService.GetIndividualUrlConsent();
                 tracingService.Trace($"Consent response: Success={consentResponse.Success}, Url={consentResponse.ConsentUrl}");
 
                 context.OutputParameters[Param_Success] = consentResponse.Success;

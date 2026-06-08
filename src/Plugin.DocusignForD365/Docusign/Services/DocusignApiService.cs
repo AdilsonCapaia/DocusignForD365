@@ -561,7 +561,7 @@ namespace Plugin.DocusignForD365.Docusign.Services
             }
         }
 
-        public DocuSignBaseResponse GetIndividualUrlConsentAsync()
+        public DocuSignBaseResponse GetIndividualUrlConsent()
         {
             var hasToken = authService.RequestJwtUserToken(out var token, out var consentUrl);
             return new DocuSignBaseResponse() { ConsentUrl = consentUrl, Success = hasToken };

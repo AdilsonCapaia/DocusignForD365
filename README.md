@@ -8,7 +8,7 @@ Full custom DocuSign integration for Power Platform and D365.
 
 ## Overview
 
-This project is a Dynamics 365 plugin that integrates with DocuSign to send documents for electronic signature directly from D365 records.
+This project is a Dynamics 365 / Dataverse plugin that integrates with DocuSign to send documents for electronic signature directly from D365 records.
 
 ## Custom API: SendDocuSignSignatureCustomApi
 
@@ -56,7 +56,28 @@ This Custom API is the main entry point for triggering a DocuSign signature proc
 
 - A DocuSign developer or production account
 - A DocuSign app configured with  (RSA keypair, that you can create from docusign it self)
-- A `docusign_user` entity in D365 mapping CRM system users to DocuSign user IDs
+- A Docusign `User ID` extracted from Docusign and put in  D365/Model driven system users record to map DocuSign user with its correspondent in D365, this is important for Docusign to recogize the user as valid sender and if it has valid docusign account.
 - Environment variables configured in Dataverse with the values above
 - Contacts linked to the TRD Contract via the M:N relationship with `trd_iseligibleasrecipient = true`
 - Documents attached to the record in `trd_document` with `trd_docusignrequiredcode = true`
+
+## Custom API: GetUrlConsentCustomApi
+
+### Overview
+
+`GetUrlConsentCustomApi` is a Dynamics 365/Dataverse Custom API plugin that retrieves the DocuSign consent URL for the current user. It determines whether the user has already granted OAuth consent to DocuSign and returns the appropriate status.
+
+### Behavior
+
+| Scenario | `Success` | `ConsentUrl` |
+|----------|-----------|--------------|
+| User has already granted consent | `true` | Reference URL |
+| User needs to grant consent | `false` | Redirect URL for consent |
+
+### Output Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| `Success` | Boolean | Whether consent has already been granted |
+| `ConsentUrl` | String | The DocuSign consent/authorization URL |
+
