@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="IsInPerson">
+  <description default="IsInPerson">
+    <label description="IsInPerson" languagecode="1033" />
+  </description>
+  <displayname default="IsInPerson">
+    <label description="IsInPerson" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>IsInPerson</name>
+  <type>0</type>
+</customapirequestparameter>

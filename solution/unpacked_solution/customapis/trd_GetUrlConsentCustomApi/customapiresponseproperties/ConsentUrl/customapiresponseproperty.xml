@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ConsentUrl">
+  <description default="ConsentUrl">
+    <label description="ConsentUrl" languagecode="1033" />
+  </description>
+  <displayname default="ConsentUrl">
+    <label description="ConsentUrl" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>ConsentUrl</name>
+  <type>10</type>
+</customapiresponseproperty>

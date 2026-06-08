@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="trd_DocuSignIntegrationKey">
+  <defaultvalue>b9f558eb-c280-409c-81dd-6c0f089af9a6</defaultvalue>
+  <displayname default="DocuSign Integration Key">
+    <label description="DocuSign Integration Key" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

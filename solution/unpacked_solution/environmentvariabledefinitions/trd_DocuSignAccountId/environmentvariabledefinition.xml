@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="trd_DocuSignAccountId">
+  <defaultvalue>e3f2526f-246e-490c-bdbd-8ae8e1089088</defaultvalue>
+  <displayname default="DocuSign Account Id">
+    <label description="DocuSign Account Id" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

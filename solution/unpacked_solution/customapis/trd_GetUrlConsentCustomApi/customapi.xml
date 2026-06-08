@@ -1,0 +1,18 @@
+<customapi uniquename="trd_GetUrlConsentCustomApi">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="GetUrlConsentCustomApi">
+    <label description="GetUrlConsentCustomApi" languagecode="1033" />
+  </description>
+  <displayname default="GetUrlConsentCustomApi">
+    <label description="GetUrlConsentCustomApi" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>trd_GetUrlConsentCustomApi</name>
+  <plugintypeid>
+    <plugintypeexportkey>ef42d5eb-1561-47d8-85ac-9dcd2b4d0eb7</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

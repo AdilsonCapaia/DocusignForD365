@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="trd_DocuSignPrivateKey">
+  <defaultvalue>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAk+ZZMm+ReKgbd5EQIunQSc42yYaoeKV3IFhplgx2Nn6RMuN6 GjhI8pQUjZL5/zlYTvaxP6rbYal5BmMhWdRmcxbazawKLAg/uZ8pIHp2TnG1kQOQ qgp07mZ6BdAzUo9a1anGpGxk9XWa6mIv+DkLRtOu6cqlVj/djicTslt71FzARN0C rsnPzpU6uNutwtvqawStfIy6CM2mBw2VIaYIj+8v9LyfxLHQ6b76o/3yzV78na7M 4w/7JuHV54fhiiPVIqVZrGFhTwkMhCMYH9xcePjHdaH8GABoEDb/01pGTFcx+uEa Wx3mvxTVe003lmCa5PIEPk2pGIeG2+BnVWD+iQIDAQABAoIBABth0tLNKCQsD4XI BDJKkqcPeEJAXZGUpOUGqWm/3eUB8tT2m6UeFZdfxhxeAU346noYH0HX2q0OqNr/ YG3Wrq8RJKpedzWmw1GU/5LFSYEFeWWjQNXSgMqgi2fnH5Fh/CHBwIaxkNGHGArb 6eCtgwJ2b5RWUd0Rju3iGznyyQ7MYzgxx1uSXxJ+XZ+TD5tiZFS7JOxixGvTQVut wskAzH+Ges39NwOH4fbgKyXG/iTngFNppjoQt4706GQDHNJZCHx+xFu2HY4NO87Y e4ybclhzvCpRquYkvLFa9vnRJ6Uf8LXMYeQ/MClCsQenJ9Z6GrouPu/8aB1in1EO ndxJJi8CgYEAxNoNW7vMSSsx3GVojcXMVRODgPy/Aqd7rBdLd2XnDkatCrBLhz+b 3lWpmirxEVx4V0F8ctcgYi+hBWdUaGstrYa5tVB/WHSWiDUscKG32socGcbvOdsC TEIOJ8u9cWhCg/o6X4PLqccfQoRG84mRnsSjpdEepMLOw+nG27Sb2e8CgYEAwFbi L6kpVYtr48wLpJrg5ezk0b4wKqEeYudORmU4BTgNjOIfMN9+1uRBY1fpd+BUiH/C SJU/MzFphwbMsdsfPLppxcpFfOGwSTWmSrhiqgEv5kHX8MEOdqdrTtyZsE+DWx9G Iur2Xb8R6fflalzAnMaK61w+qNA/NUks14LfhwcCgYEAiSUNp3qIUfW5ED7Kf/Nt b1xgAw6TmSrMW9IC7tVdC7IrvsWiaUDkvBrcRZ9jQmA1Kz1hkbTVR/K88UHTKch6 E2pImczSW/MmKRE6u+G/cLvcpgzWAG3YBP8EU697dbZYmRBNeNwemVM0MShtMiEH BiEjjlPKUKm0WgPWWp1S85sCgYA2911yc2xtlweBNSnKo7xL2RRXYHvRYvQVHbc/ 5ONKkodE0MZLKEPOU7LgGhqNeJ2P2LsEFSrXjXJz9RyAY3ec2kUqEjEjjDfd5Cge yGzh2q7+pah5lCJ3BEdlZSPCwCZw3xIjHnTDu7v52i9E4zbkVtUSh+0cP08hAkV/ XVZV9wKBgB24CL+J3KXiRewOdkYWGqdNzVEu9Qw3dGfC0tMoUmvptMkbjX1h73sB nqhrAmqgdI1IvvZsGkIXbL1UnXq3EnHQ/WOKmQJ0K3rDQcW8MI2mPRqhjdj2GF95 Lv7RWXtgnmaFo4ZgZF90Ks11rkH0RcEy8cN2v36O6kMw6LyzKXl7 -----END RSA PRIVATE KEY-----</defaultvalue>
+  <displayname default="DocuSign Private Key">
+    <label description="DocuSign Private Key" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

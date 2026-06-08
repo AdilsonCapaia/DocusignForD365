@@ -1,0 +1,18 @@
+<customapi uniquename="trd_SendDocuSignSignatureCustomApi">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="SendDocuSignSignatureCustomApi">
+    <label description="SendDocuSignSignatureCustomApi" languagecode="1033" />
+  </description>
+  <displayname default="SendDocuSignSignatureCustomApi">
+    <label description="SendDocuSignSignatureCustomApi" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>trd_SendDocuSignSignatureCustomApi</name>
+  <plugintypeid>
+    <plugintypeexportkey>f3bd14f6-74ae-46a4-85b2-7fa53631a6e1</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="trd_EnvironmentBaseUrl">
+  <defaultvalue>https://trd-blog-deve.crm4.dynamics.com</defaultvalue>
+  <displayname default="EnvironmentBaseUrl">
+    <label description="EnvironmentBaseUrl" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

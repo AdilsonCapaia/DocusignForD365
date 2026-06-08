@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="EnvelopeUri">
+  <description default="EnvelopeUri">
+    <label description="EnvelopeUri" languagecode="1033" />
+  </description>
+  <displayname default="EnvelopeUri">
+    <label description="EnvelopeUri" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>EnvelopeUri</name>
+  <type>10</type>
+</customapiresponseproperty>
