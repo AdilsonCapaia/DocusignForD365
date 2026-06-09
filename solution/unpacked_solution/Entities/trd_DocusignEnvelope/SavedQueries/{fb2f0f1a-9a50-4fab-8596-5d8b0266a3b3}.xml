@@ -11,6 +11,10 @@
       <grid name="trd_docusignenvelopes" jump="trd_name" select="1" icon="1" preview="1">
         <row name="trd_docusignenvelope" id="trd_docusignenvelopeid">
           <cell name="trd_name" width="300" />
+          <cell name="statuscode" width="119" />
+          <cell name="fou_completedon" width="123" />
+          <cell name="trd_sender" width="100" />
+          <cell name="trd_envelopeid" width="112" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
@@ -26,6 +30,10 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="statuscode" />
+          <attribute name="fou_completedon" />
+          <attribute name="trd_envelopeid" />
+          <attribute name="trd_sender" />
         </entity>
       </fetch>
     </fetchxml>

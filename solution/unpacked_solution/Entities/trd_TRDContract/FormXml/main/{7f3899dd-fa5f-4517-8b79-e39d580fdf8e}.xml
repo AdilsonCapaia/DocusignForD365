@@ -110,6 +110,38 @@
                     <row />
                   </rows>
                 </section>
+                <section name="null_section_4" id="437fe690-f1f1-4423-bd47-c5edcc29b863" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Envelope Tracking" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{db51a342-42cb-44c9-a047-4e64c299e1da}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1780990548488" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>trd_trd_docusignenvelope_trd_trdcontract_trd_RegardingObjectId</RelationshipName>
+                            <TargetEntityType>trd_docusignenvelope</TargetEntityType>
+                            <ViewId>{5A0B6F79-3009-4FFD-B9B5-8738AF4F462F}</ViewId>
+                            <ViewIds>{5A0B6F79-3009-4FFD-B9B5-8738AF4F462F}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
               </sections>
             </column>
           </columns>

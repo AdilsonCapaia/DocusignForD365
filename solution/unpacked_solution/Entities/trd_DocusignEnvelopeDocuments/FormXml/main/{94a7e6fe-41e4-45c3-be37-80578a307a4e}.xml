@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{de6fda11-5fb4-44c2-99be-097be9dfbe8c}" IsUserDefined="1">
           <labels>
@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a78f0c86-8397-4e04-9bec-ffb37e7fe62d}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a78f0c86-8397-4e04-9bec-ffb37e7fe62d}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -28,11 +28,58 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{82741509-5b17-4c62-adbf-6e9aa58560f3}">
+                      <cell id="{fd6f3d8c-9b9d-4985-b714-5a10475c3546}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Envelope" languagecode="1033" />
+                        </labels>
+                        <control id="trd_docusignenvelopeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="trd_docusignenvelopeid" disabled="false" />
+                      </cell>
+                      <cell id="{23141da9-daf0-45e9-b02e-46dde9a5fce5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DocumentId" languagecode="1033" />
+                        </labels>
+                        <control id="trd_ds_documentid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="trd_ds_documentid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{24297dcb-905d-4132-91e3-6c7256775358}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Document" languagecode="1033" />
+                        </labels>
+                        <control id="trd_documentid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="trd_documentid" disabled="false" />
+                      </cell>
+                      <cell id="{c0baf68b-2b7f-4cc5-ad60-efcb9c4e1654}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DocumentIdGuid" languagecode="1033" />
+                        </labels>
+                        <control id="trd_ds_documentguidid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="trd_ds_documentguidid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d25049e8-c656-43de-a29c-8a1a5fdd38c6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Signed" languagecode="1033" />
+                        </labels>
+                        <control id="trd_signed" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="trd_signed" disabled="false" />
+                      </cell>
+                      <cell id="{8858e725-eec5-4033-9d98-accae8069b1d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Signed Document" languagecode="1033" />
+                        </labels>
+                        <control id="trd_signeddocumentid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="trd_signeddocumentid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{82741509-5b17-4c62-adbf-6e9aa58560f3}" visible="false">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{9923fb77-6cff-417b-b871-eab85642fb67}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
                       </cell>
                     </row>
                   </rows>
@@ -42,6 +89,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{157e8175-e47a-4fb4-8654-af3fcc40b612}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{17ca6a41-167e-4a5d-b689-6fb204e5274d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5a3bf5af-284b-46db-b621-31956d4e51e0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c491cc88-b2e5-45e2-9a39-347f6076110a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{4c9df160-38f0-48c6-a8d5-9d4b1b1532c3}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b1596b93-fdf3-4491-b2f6-2ee0543e0fac}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{80484597-2748-4f3c-a238-d7614e577583}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ab4b6e61-35c5-43f5-8830-9f528afdb151}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

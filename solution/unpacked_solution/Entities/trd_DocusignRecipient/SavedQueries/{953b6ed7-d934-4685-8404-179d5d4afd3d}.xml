@@ -10,7 +10,12 @@
     <layoutxml>
       <grid name="resultset" jump="trd_name" select="1" icon="1" preview="1">
         <row name="result" id="trd_docusignrecipientid">
-          <cell name="trd_name" width="300" />
+          <cell name="trd_recipientname" width="131" />
+          <cell name="trd_recipientemail" width="131" />
+          <cell name="trd_recipientid" width="112" />
+          <cell name="statuscode" width="132" />
+          <cell name="trd_signedon" width="100" />
+          <cell name="trd_docusignenvelopeid" width="169" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
@@ -20,12 +25,16 @@
       <fetch version="1.0" mapping="logical">
         <entity name="trd_docusignrecipient">
           <attribute name="trd_docusignrecipientid" />
-          <attribute name="trd_name" />
           <attribute name="createdon" />
-          <order attribute="trd_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="trd_recipientname" />
+          <attribute name="trd_recipientemail" />
+          <attribute name="trd_recipientid" />
+          <attribute name="trd_docusignenvelopeid" />
+          <attribute name="statuscode" />
+          <attribute name="trd_signedon" />
         </entity>
       </fetch>
     </fetchxml>

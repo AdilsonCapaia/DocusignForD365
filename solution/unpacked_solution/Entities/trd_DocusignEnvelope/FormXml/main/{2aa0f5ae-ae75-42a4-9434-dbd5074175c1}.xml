@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{b9c7ce0b-4d65-41e4-907d-471b1cfc7e27}" IsUserDefined="1">
           <labels>
@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{630c7fba-300e-497b-ae97-f34aa9b0019d}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{630c7fba-300e-497b-ae97-f34aa9b0019d}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -26,13 +26,65 @@
                         </labels>
                         <control id="trd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="trd_name" />
                       </cell>
+                      <cell id="{2483b144-e4e2-4790-b5a0-7b6f5cfa5165}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Envelope ID" languagecode="1033" />
+                        </labels>
+                        <control id="trd_envelopeid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="trd_envelopeid" disabled="false" />
+                      </cell>
                     </row>
                     <row>
-                      <cell id="{589934aa-daeb-45cf-83e8-80d7fb8cdf79}">
+                      <cell id="{eb1b4e63-f4ee-4f63-8718-b2c6d6729a22}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Envelope Template ID" languagecode="1033" />
+                        </labels>
+                        <control id="trd_envelopetemplateid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="trd_envelopetemplateid" disabled="false" />
+                      </cell>
+                      <cell id="{47345d8d-8540-4273-bf88-1887aa2aa432}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{574f3e77-0628-4e17-8a04-1017027868eb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Regarding" languagecode="1033" />
+                        </labels>
+                        <control id="trd_regardingobjectid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="trd_regardingobjectid" disabled="false" />
+                      </cell>
+                      <cell id="{0def37d0-e763-41db-b1c2-73190862c5a7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Completed On" languagecode="1033" />
+                        </labels>
+                        <control id="fou_completedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="fou_completedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{46237016-83f3-44d6-8f5c-22d393cec78d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sender" languagecode="1033" />
+                        </labels>
+                        <control id="trd_sender" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="trd_sender" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{2753f9c6-6978-41a1-a619-b2d82a285fcb}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{589934aa-daeb-45cf-83e8-80d7fb8cdf79}" visible="false">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{f990bc63-4c41-45db-acba-c9c406bf9657}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
                       </cell>
                     </row>
                   </rows>
@@ -42,6 +94,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{369df275-4157-4a86-a6e2-d088c7e73c69}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ebe1cef9-6a03-4b47-b41d-05cb9341fbac}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ecec103-bd2a-43ed-b201-7284634132ef}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a1c043f6-83b1-4e8c-ace4-d8f91a4bfe48}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{2c2f26ed-1d30-4914-abf1-f890d33a445a}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{26fbc882-3860-4851-8fc2-5ddc09db87bc}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e1b272d3-8886-4e58-af8d-65fe3067a183}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b7253620-6a46-4939-a0e2-2ee60f856197}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
